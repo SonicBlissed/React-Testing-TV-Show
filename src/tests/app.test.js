@@ -6,15 +6,15 @@ import App from '../App';
 
 // import {fetchShow as mockFetchShow} from '../api/fetchShow';
 
-// test('Renders App without errors', ()=> {
-//     render(<App/>)
-// });
+test('Renders App without errors', ()=> {
+    render(<App/>)
+});
 
 
 test('Fetches data correctly when button is clicked', async()=> {
  
  render(<App/>)
- await waitFor(async()=> {
+
     const dropdown = await screen.findByText(/select a season/i);
     console.log(dropdown);
     userEvent.click(dropdown);
@@ -33,10 +33,10 @@ test('Fetches data correctly when button is clicked', async()=> {
     // });
     // expect(screen.getByText('Season 2')).toBeInTheDocument();
     // console.log('Testing')
-});
 
 
 });
+
 
 
 
